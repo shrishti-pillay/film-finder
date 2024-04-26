@@ -10,7 +10,7 @@ const headers = {
 }
 
 const getGenres = async () => {
-  const genreRequestEndpoint = tmdbBaseUrl+'/genre/movie/list?language=en'
+  const genreRequestEndpoint = TMDB_BASE_URL+'/genre/movie/list?language=en'
   const urlToFetch = genreRequestEndpoint;
 
   try{
@@ -30,7 +30,7 @@ const getMovies = async () => {
   const selectedGenre = getSelectedGenre();
   const discoverMovieEndpoint = '/discover/movie?'
   const requestParams = `with_genres=${selectedGenre}`;
-  const urlToFetch = tmdbBaseUrl+discoverMovieEndpoint+requestParams;
+  const urlToFetch = TMDB_BASE_URL+discoverMovieEndpoint+requestParams;
 
   try{
     const response = await fetch(urlToFetch, headers);
@@ -47,7 +47,7 @@ const getMovies = async () => {
 const getMovieInfo = async (movie) => {
   const movieId = movie.id;
   const movieEndpoint= `/movie/${movieId}`
-  const urlToFetch = tmdbBaseUrl+movieEndpoint;
+  const urlToFetch = TMDB_BASE_URL+movieEndpoint;
 
   try {
     const response = await fetch (urlToFetch, headers);
