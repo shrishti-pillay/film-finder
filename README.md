@@ -2,6 +2,8 @@
 
 Film Finder is a web application that helps you discover movies by genre using The Movie Database (TMDb) API.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ## Features
 
 - Browse and discover movies by genre
@@ -41,9 +43,5 @@ Film Finder is a web application that helps you discover movies by genre using T
 # Dependencies
 
 TMDb API
-
-# License
-
-This project is licensed under the MIT License.
 
 Note: Keep your API keys secure and do not commit sensitive information to public repositories.
